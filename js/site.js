@@ -26,6 +26,7 @@ function print_filter(filter) {
     console.log(filter+"("+f.length+") = "+JSON.stringify(f).replace("[","[\n\t").replace(/}\,/g,"},\n\t").replace("]","\n]"));
 }
 
+
 function generate3WComponent(config, data, geom) {
 
     var lookup = genLookup(geom, config);
@@ -105,10 +106,10 @@ function generate3WComponent(config, data, geom) {
         return d[config.sumField]
     });
     var MChartGroup = MChartDim.group().reduceSum(function (d) {
-        return parseInt(1)
+        return parseInt(d[config.sumField]);
     });
     var TPChartGroup = TPChartDim.group().reduceSum(function (d) {
-        return parseInt(1)
+        return parseInt(d[config.sumField]);
     });
 
     var groupMecha = dimMecha.group().reduceSum(function (d) {
@@ -278,6 +279,13 @@ function generate3WComponent(config, data, geom) {
             text = d.key + " | No. Beneficiaries : " + formatComma(d.value);
             return capitalizeFirstLetter(text);
         });
+
+
+    //tooltip
+    var rowtip = d3.tip().attr('class', 'd3-tip').html(function (d) {
+        return d.key + ': ' + d3.format('0,000')(d.value);
+
+    });
 
     SABTChart.width($('.blockbar').width()).height(400).margins({top: 10, right: 10, bottom: 30, left: 0})
         .dimension(SABTDimension)
@@ -485,7 +493,8 @@ function generate3WComponent(config, data, geom) {
 
 
     var g = d3.selectAll('#hdx-3W-SABT').select('svg').append('g');
-
+    d3.selectAll('g.row').call(rowtip);
+    d3.selectAll('g.row').on('mouseover', rowtip.show).on('mouseout', rowtip.hide);
 
 
     function zoomToGeom(geom) {
