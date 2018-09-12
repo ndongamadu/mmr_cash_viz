@@ -38,6 +38,10 @@
 	width: 20px !important;
 	height: 20px !important;
 }
+.leaflet-marker-shadow{
+	width: 15px !important;
+	height: 15px !important;
+}
 /* map is broken in FF if you have max-width: 100% on tiles */
 .leaflet-container img {
 	max-width: none !important;
