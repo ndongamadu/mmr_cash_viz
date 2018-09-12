@@ -24,7 +24,7 @@ dc.leafletChart = function (_chart) {
         //    maxZoom: 14
         //}).addTo(map); 
 
-        var marker = L.marker([19.7633057,96.0785145]).addTo(map).bindPopup('Naypyitaw, Myanmar (Burma)');
+        var marker = L.marker([19.7633057,96.0785145]).addTo(map).bindPopup('Naypyitaw, Myanmar');
 
         //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         //    maxZoom: 19,
