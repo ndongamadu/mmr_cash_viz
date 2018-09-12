@@ -304,7 +304,7 @@ function generate3WComponent(config, data, geom) {
             text = d.key + " | No. Activities : " + formatComma(d.value);
             return capitalizeFirstLetter(text);
         })
-        .xAxis().ticks(0);
+        .xAxis().ticks(5);
 
     TVCPBTChart.width($('.blockbar').width()).height(400).margins({top: 10, right: 10, bottom: 30, left: 0})
         .dimension(TVCPBTDimension)
@@ -323,7 +323,7 @@ function generate3WComponent(config, data, geom) {
             text = d.key + " | Cash Allocation : $" + formatComma(d.value);
             return capitalizeFirstLetter(text);
         })
-        .xAxis().ticks(0);
+        .xAxis().ticks(5);
 
     VBSOAChart.width($('.blockbar').width()).height(300).margins({top: 10, right: 10, bottom: 30, left: 0})
         .dimension(VBSOADimension)
@@ -342,7 +342,7 @@ function generate3WComponent(config, data, geom) {
             text = d.key + " | No. Beneficiaries : " + formatComma(d.value);
             return capitalizeFirstLetter(text);
         })
-        .xAxis().ticks(0);
+        .xAxis().ticks(5);
 
 
     TBBTChart.width($('.blockbar').width()).height(400).margins({top: 10, right: 10, bottom: 30, left: 0})
@@ -362,7 +362,7 @@ function generate3WComponent(config, data, geom) {
             text = d.key + " | No. Beneficiaries : " + formatComma(d.value);
             return text; //capitalizeFirstLetter(text);
         })
-        .xAxis().ticks(0);
+        .xAxis().ticks(5);
 
     MChart.width($('.blockbar').width()).height(160).margins({top: 10, right: 10, bottom: 30, left: 0})
         .dimension(MChartDim)
@@ -381,7 +381,7 @@ function generate3WComponent(config, data, geom) {
             text = d.key + " | Activities : " + formatComma(d.value);
             return text; //capitalizeFirstLetter(text);
         })
-        .xAxis().ticks(0);
+        .xAxis().ticks(5);
 
     TPChart.width($('.blockbar').width()).height(160).margins({top: 10, right: 10, bottom: 30, left: 0})
         .dimension(TPChartDim)
@@ -400,7 +400,7 @@ function generate3WComponent(config, data, geom) {
             text = d.key + " | No. Targeted Population  : " + formatComma(d.value);
             return text; //capitalizeFirstLetter(text);
         })
-        .xAxis().ticks(0);
+        .xAxis().ticks(5);
 
 
 
