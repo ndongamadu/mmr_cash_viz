@@ -38,6 +38,15 @@
             margin-bottom: 15px
             /*background: red;*/
         }
+        .legend { list-style: none; font-family: sans-serif; }
+        .legend li { display: block; margin-right: 10px; margin-bottom: 7px;}
+        .legend span { border: 1px solid #ccc; float: left; width: 30px; height: 17px; margin: 1px; font-family: sans-serif; }
+        /* your colors */
+        .legend .higher { background-color: #3d75b5; }
+        .legend .seconhigher { background-color: #6794c0; }
+        .legend .lower { background-color: #9bb4ca; }
+        .legend .notapplicable { background-color: #d5d5d5; 
+        }
         .blockrow{
             /*margin-bottom: 15px;*/
         }
@@ -136,12 +145,21 @@
                             <div id="hdx-3W-TP" class="hdx-3w-chart"></div>
                         </div>
                         <div class="col-md-12">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <div class='my-legend'></div>
+                            <h2>Legend</h2>
+                            <div class='legend'>
+                              <ul class='legend' style="padding-left: 0;">
+                                <li><span class="higher"></span>&nbsp;&nbsp;More than 50,0000</li>
+                                <li><span class="seconhigher"></span>&nbsp;&nbsp;Less than 50,000 more than 1,000</li>
+                                <li><span class="lower"></span>&nbsp;&nbsp;Less than 1,000</li>
+                                <li><span class="notapplicable"></span>&nbsp;&nbsp;Not applicable</li>
+                              </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <h4>Cash transfer by region/state</h4>
+                    <h4>Number of beneficiaries by region/state</h4>
                     <div id="hdx-3W-where" class="hdx-3w-chart"></div>
                 </div>
             </div>
